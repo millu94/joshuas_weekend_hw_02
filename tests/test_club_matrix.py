@@ -9,7 +9,7 @@ class TestClubMatrix(unittest.TestCase):
 
     def setUp(self):
         self.karaoke_den = ClubMatrix("Karaoke Den", 12000.50, 5)
-        # all characters from aggretsuko
+
         self.room_a =  Rooms("Room A")
         self.room_b =  Rooms("Room B")
         self.room_c =  Rooms("Room C")

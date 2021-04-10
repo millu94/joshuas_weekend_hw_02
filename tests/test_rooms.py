@@ -22,3 +22,6 @@ class TestRooms(unittest.TestCase):
     def test_add_playlist_to_room(self):
         self.room_b.add_playlist_to_room("Funk")
         self.assertEqual(["Funk"], self.room_b.playlist)
+
+    def test_guest_plus_friends_are_added(self):
+        pass
