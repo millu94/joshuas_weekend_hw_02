@@ -8,6 +8,7 @@ from classes.songs import Songs
 class TestGuest(unittest.TestCase):
     def setUp(self):
         self.karaoke_den = ClubMatrix("Karaoke Den", 120000, 5)
+        self.full_karaoke_den = ClubMatrix("Full Karaoke Den", 120000, 0)
 
         self.retsuko = Guests("Retsuko", 6000, "Ace Of Spades by Motörhead")
         self.fenneko = Guests("Fenneko", 4500, "Stayin Alive by The Bee Gees")
@@ -30,3 +31,7 @@ class TestGuest(unittest.TestCase):
         self.assertEqual(9000, self.washimi.wallet)
         self.assertEqual(121000, self.karaoke_den.till)
         self.assertEqual(4, self.karaoke_den.available_rooms)
+
+    def test_guest_cant_book_room(self):
+        message = self.fenneko.book_room(self.full_karaoke_den)
+        self.assertEqual("Sorry we're full!", message)
