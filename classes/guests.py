@@ -13,5 +13,5 @@ class Guests:
             return "Thank you, have fun!"
         return "Sorry we're full!"
 
-    def whoop_whoop():
-        pass
+    def whoop_whoop(self):
+        return "I'm having fun, these complimentary drinks are satisfactory."
