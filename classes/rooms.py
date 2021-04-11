@@ -1,6 +1,6 @@
 class Rooms:
 
-    def __init__(self, name: str, playlist: str, occupied: bool):
+    def __init__(self, name, playlist, occupied):
         self.name = name
         self.playlist = playlist
         self.occupied  = occupied
@@ -17,3 +17,12 @@ class Rooms:
         #if false then change occupied status to True
         else:
             self.occupied = True
+
+    def check_out(self,):
+        #if room isn't occupied (false) then print message "choose another room"
+        if self.occupied == False:
+            return "Room is already vacant"
+        #if True then change occupied status to False, AND clear the playlist
+        else:
+            self.occupied = False
+            self.playlist = []
